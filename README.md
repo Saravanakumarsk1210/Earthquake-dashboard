@@ -17,60 +17,66 @@ This project analyzes global earthquake data between **1995 and 2023** and prese
 - `earthquake_1995-2023.csv`
 - `earthquake_data.csv`
 
-> These contain earthquake event logs from multiple global sources with various inconsistencies, nulls, and formatting issues.
+> These contain earthquake event logs from global sources, including missing values, inconsistencies, and unformatted fields.
 
-### 🔹 Cleaned Data:
-- `Cleaned earthquake dataset.csv`  
+### 🔹 Cleaned Data Used:
+- `Cleaned earthquake dataset.csv`
 
-> Cleaned using Python scripts—nulls handled, date and time normalized, alerts standardized, and fields like `magnitude`, `depth`, `tsunami`, and `significance (sig)` cleaned.
+> This file is the **only dataset used in the dashboard**. It was cleaned using Python scripts—null values removed, timestamps converted, alerts categorized, and numeric columns like `magnitude`, `depth`, and `significance` fixed and standardized.
 
 ---
 
 ## 📊 Exploratory Data Analysis (EDA)
 
 ### Key Explorations:
-- Temporal range and distribution of earthquake events
-- Magnitude and depth distributions
-- Alert level categorization
-- Geographic distribution (continents and countries)
-- High magnitude zones (>= 7.0)
+- Earthquake frequency over time
+- Magnitude and depth ranges
+- Alert level breakdown
+- Country and continent-level trends
+- Geospatial clustering of high-risk zones
 
 ### Techniques Used:
 - Histograms, scatter plots, box plots (via Plotly)
-- Group-wise summaries by continent and country
-- Geospatial heatmaps and markers (Folium)
+- Grouped summaries using Pandas
+- Folium-based mapping with heatmaps and markers
 
 ---
 
 ## 🖥️ Interactive Streamlit Dashboard
 
-### Dashboard Highlights:
-- **Date Range Selector** to filter events
-- **Magnitude & Depth Sliders**
-- **Alert Level Filters**
-- **Key Metrics**: Total quakes, average magnitude, max magnitude, tsunami count
-- **Geospatial Insights**:
-  - Heatmap of global seismic activity
-  - Marker map highlighting major events
-- **Country & Continent Trends**:
-  - Top 10 countries by earthquake count
-  - Pie chart showing continent-wise distribution
-- **Magnitude Analytics**:
-  - Frequency distribution
-  - Magnitude vs Depth & Significance
-- **Dynamic Table**:
-  - Filtered events displayed with sort by date
+### Dashboard Features:
+- **Filters**:
+  - Date range selector
+  - Magnitude slider
+  - Depth range slider
+  - Alert level multiselect
 
-> 📁 Code file: `app.py`  
-> 🔧 Uses: `pandas`, `plotly`, `folium`, `streamlit`, `streamlit-folium`
+- **Metrics Displayed**:
+  - Total Earthquakes
+  - Average Magnitude
+  - Maximum Magnitude
+  - Earthquakes involving Tsunamis
+
+- **Visualizations**:
+  - 🌍 **Heatmap** of earthquake activity
+  - 📌 **Marker map** of major seismic zones
+  - 📊 **Top 10 Countries by Count**
+  - 🧭 **Continent-wise distribution (Pie Chart)**
+  - 📉 **Histogram of Magnitude Frequency**
+  - 📈 **Scatter: Depth vs Magnitude**
+  - 📦 **Boxplot: Magnitude vs Significance**
+  - 📄 **Table View** of filtered earthquake data
+
+> 🔧 Built with `pandas`, `plotly`, `folium`, `streamlit`, and `streamlit-folium`  
+> 📁 Main app code: `app.py`
 
 ---
 
 ## 📂 Files Included
 
 - `earthquake_1995-2023.csv` – Raw dataset  
-- `earthquake_data.csv` – Another version of raw input  
-- `Cleaned earthquake dataset.csv` – Cleaned dataset used for dashboard   
+- `earthquake_data.csv` – Alternate version of raw data  
+- `Cleaned earthquake dataset.csv` – Final cleaned file used in dashboard  
 - `app.py` – Streamlit dashboard code  
 - `README.md` – Project documentation (this file)
 
@@ -78,18 +84,17 @@ This project analyzes global earthquake data between **1995 and 2023** and prese
 
 ## 📈 Key Takeaways
 
-| Aspect               | Insight                                                                 |
-|----------------------|-------------------------------------------------------------------------|
-| 🌐 Global Trends      | Seismic activity patterns across time, magnitude, and geography        |
-| 📍 Hotspots           | Identified zones with high seismic recurrence                          |
-| 📊 Visual Analytics   | Rich visuals for user-friendly data exploration                        |
-| 📌 Alert Analysis     | Categorized impact potential of events                                 |
-| 🧠 Interactive Filters| Dynamic slicers enhance user control over analysis parameters          |
+| Insight Area         | Description                                                           |
+|----------------------|------------------------------------------------------------------------|
+| 🌐 Global Patterns     | Reveals trends in frequency, magnitude, and depth globally            |
+| 🗺️ Hotspot Detection   | Highlights high-seismic-risk areas across countries and continents     |
+| 📊 Alert Awareness     | Understands the severity levels and preparedness requirements         |
+| 📌 User Interactivity | Lets users explore data with filters and intuitive visualizations      |
 
 ---
 
 ## 💡 Final Notes
 
-This project demonstrates how **raw geospatial data** can be transformed into actionable insights using **data cleaning**, **EDA**, and **dashboarding**. It serves as a powerful template for environmental monitoring, disaster response planning, and public awareness tools.
+This project showcases how **cleaned geospatial event data** can be transformed into powerful, accessible dashboards that support **risk analysis**, **policy planning**, and **public awareness** on global seismic activity.
 
 ---
