@@ -1,7 +1,7 @@
 # 🌍 Earthquake Analysis Dashboard (1995–2023)
 
 > **Dataset Source**: Global earthquake records (1995–2023)  
-> **Tools Used**: Python, Pandas, Plotly, Folium, Streamlit
+> **Tools Used**: Python, Pandas, Plotly, Folium, Streamlit 
 
 ---
 
